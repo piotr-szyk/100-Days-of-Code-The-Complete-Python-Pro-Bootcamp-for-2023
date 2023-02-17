@@ -7,8 +7,13 @@
 
 #Write your code below this line 👇
 
-
-bill = float(input("What is the bill?\n"))
-per_person = (bill / 5) * 1.12 
+print("Welcome to the tip calculator!")
+bill = float(input("What was the total bill? $"))
+guests = int(input("How many people eating? "))
+tip = int(input("Choose tip: 10, 12, 15 or 20? "))
+tip_percent = tip/100
+total_tip_amount = bill * tip_percent
+total_bill = bill + total_tip_amount
+per_person = (total_bill / guests)
 print("%.2f" % per_person)
 #print(type(per_person))
